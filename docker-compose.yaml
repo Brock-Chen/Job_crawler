@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  server:
+    build: /
+    container_name: selenium
+    volumes:
+      - ./104:/app/104
