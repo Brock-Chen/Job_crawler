@@ -61,7 +61,7 @@ def log_response(response) :
 def main( keyword: str, city: str, position: str, pages: int) :
     driver.get("https://www.104.com.tw/jobs/main/")
     driver.implicitly_wait(5)
-    driver.maximize_window()
+    # driver.maximize_window()
     # driver.save_screenshot("/app/screenshots/debug.png")
 
     # 選擇市區
@@ -109,8 +109,9 @@ def main( keyword: str, city: str, position: str, pages: int) :
     location = driver.find_elements(By.XPATH,"//div[@class='info-tags gray-deep-dark']/span[1]")
     experience = driver.find_elements(By.XPATH,"//div[@class='info-tags gray-deep-dark']/span[2]")
     # education = driver.find_elements(By.XPATH,"//div[@class='info-tags gray-deep-dark']/span[3]")
-    pay = driver.find_elements(By.XPATH,"//div[@class='info-tags gray-deep-dark']/span[4]/a")
+    pay = driver.find_elements(By.XPATH,"//div[@class='info-tags gray-deep-dark']/span[4]/a | //div[@class='info-tags gray-deep-dark']/span[4][not(a)]")
     # detail = driver.find_elements(By.XPATH,"//div[@class='info-container']/div[4]")
+    # print(len(last_update_date), len(titleTages), len(company), len(location), len(experience), len(pay))
 
     arr, url_arr = [], []
     now = time.localtime()

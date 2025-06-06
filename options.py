@@ -32,6 +32,8 @@ chrome_options.add_argument("--disable-site-isolation-trials")
 chrome_options.add_argument("--disable-setuid-sandbox")
 chrome_options.add_argument("--disable-crash-reporter")
 
+chrome_options.add_argument("--window-size=1920,1080")
+
 # 設置 HTTP headers 語言偏好
 chrome_options.add_experimental_option('prefs', {
     'intl.accept_languages': "zh-TW,zh",
