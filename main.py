@@ -116,6 +116,7 @@ def main( keyword: str, city: str, position: str, pages: int) :
     arr, url_arr = [], []
     now = time.localtime()
     file_name = f"{now.tm_year}-{now.tm_mon}-{now.tm_mday}_{keyword if keyword != '' else position}_{city}"
+    file_name = file_name.replace("#", "Sharp")
     n = 0
     while len(titleTages) > n :
         job = []
